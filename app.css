@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 3rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Intro */
+p {
+  margin: 1rem 0;
+}
+
+/* User Stats/Inputs */
+.user-inputs {
+  text-align: center;
+  border: 1px black solid;
+  padding: 1rem;
+}
+
+label {
+  margin-left: 1rem;
+}
+
+.btn-toggle {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  width: 100px;
+  color: grey;
+  margin: 0;
+}
+
+.btn-toggle:hover {
+  background: #ddd;
+}
+
+.active {
+  font-weight: bold;
+  color: black;
+  border-bottom: 2px black solid;
+}
+
+.btn-toggle:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+/* Stopwatch */
+.digit {
+  font-size: 150px;
+}
+
+.txt {
+  font-size: 30px;
+  color: #333;
+}
+
+/* Stopwatch Control Buttons */
+.control-btns {
+  margin: 1rem;
+}
+
+.btn {
+  padding: 8px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0 20px;
+}
+
+.input-btn {
+  font-size: 1rem;
+  padding: 0.2rem 0.5rem;
+  margin: 0 0.5rem;
+}
+
+/* Stats */
+.stats {
+  margin: 1rem 0;
+}
+.stats span {
+  margin-right: 0.3rem;
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background: #ddd;
+}
+tr:nth-child(even) > td {
+  border-color: white;
+}

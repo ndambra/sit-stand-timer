@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./app.css" />
+    <title>Stand-Sit Timer for Work</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Stand:Sit Ratio Timer</h1>
+      <p>
+        Have a standing desk? Need to know how long you should stand for? Well,
+        we don't have those answers but........ We've read that it's good to
+        follow a 1:1, 2:1, or, 3:1 stand-to-sit ratio in a given working day.
+        That's a lot of math to figure out, extra work and time you could, and
+        should, be spending on your actual job. Or pretending to do your actual
+        job (Hey, we aren't here to judge).
+      </p>
+      <p>
+        We all got into the standing game to lead a healthy life style, we find
+        it comfortable, someone told us it was healthy, etc. Whatever the reason
+        we are here to help (kind of)! Simply enter your target working hours,
+        the ratio you want, and just start the timer whenever you are sitting,
+        and the tool will let you know how much of your remaining day you should
+        spend standing
+      </p>
+
+      <div class="user-inputs">
+        <h2>User Inputs</h2>
+        <label for="ratio-select">Stand-to-Sit Ratio</label>
+        <select name="ratio" id="ratio-select">
+          <option value="0">--Select a ratio</option>
+          <option value="3">3:1</option>
+          <option value="2">2:1</option>
+          <option value="1">1:1</option>
+        </select>
+
+        <label for="workDay">Work Day (hours)</label>
+        <input type="number" name="workDay" id="workDay" value="8" />
+        <button class="input-btn btn" id="begin" autocomplete="off">
+          Begin Day
+        </button>
+        <button class="input-btn btn" id="resetDay" autocomplete="off" disabled>
+          Reset Day
+        </button>
+      </div>
+
+      <p>
+        Based on your inputs it is suggested to stand for about
+        <span id="suggestStand">0</span> hours. Be sure to alternate between
+        sitting and standing!
+      </p>
+      <div class="more-buttons">
+        <button class="btn-toggle active" id="standBtn" autocomplete="off">
+          Stand
+        </button>
+        <button class="btn-toggle" id="sitBtn" autocomplete="off">Sit</button>
+      </div>
+
+      <div class="time">
+        <span class="digit" id="hr">00</span>
+        <span class="txt">Hr</span>
+        <span class="digit" id="min">00</span>
+        <span class="txt">Min</span>
+        <span class="digit" id="sec">00</span>
+        <span class="txt">Sec</span>
+      </div>
+      <div class="control-btns">
+        <button class="btn" id="start" autocomplete="off" disabled>
+          Start
+        </button>
+        <button class="btn" id="stop" autocomplete="off" disabled>Stop</button>
+        <button class="btn" id="reset" autocomplete="off" disabled>
+          Reset
+        </button>
+      </div>
+      <div class="stats">
+        <label for="standTime">Total Stand Time:</label>
+        <span id="standTime">0</span>
+        <label for="sitTime">Total Sitting Time:</label>
+        <span id="sitTime">0</span>
+      </div>
+
+      <table>
+        <tr>
+          <th>Time Start</th>
+          <th>Time Stop</th>
+          <th>Duration</th>
+          <th>Sit or Stand?</th>
+        </tr>
+      </table>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
